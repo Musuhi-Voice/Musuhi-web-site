@@ -17,8 +17,8 @@
   --kin: #c4a45f;         /* 金 — 水引の金。ごく少量の差し色 */
 
   /* 書体 */
-  --font-mincho: "Shippori Mincho B1", "Hiragino Mincho ProN", serif;
-  --font-gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+  --font-heading: "Zen Kaku Gothic New", "Meiryo", "Hiragino Kaku Gothic ProN", sans-serif;
+  --font-gothic: "Zen Kaku Gothic New", "Meiryo", "Hiragino Kaku Gothic ProN", sans-serif;
   --font-latin: "Inter", sans-serif;
 
   --max-width: 1080px;
@@ -186,8 +186,8 @@ a { color: var(--ruri); }
 
 .hero__title {
   writing-mode: vertical-rl;
-  font-family: var(--font-mincho);
-  font-weight: 600;
+  font-family: var(--font-heading);
+  font-weight: 700;
   font-size: clamp(30px, 4.6vw, 54px);
   line-height: 1.9;
   letter-spacing: 0.14em;
@@ -221,7 +221,7 @@ a { color: var(--ruri); }
 
 .hero__lead em {
   font-style: normal;
-  font-family: var(--font-mincho);
+  font-family: var(--font-heading);
   font-weight: 700;
   color: var(--ruri);
 }
@@ -256,7 +256,7 @@ a { color: var(--ruri); }
 .cord__strand--mid { stroke: var(--kin); }
 
 .hero__cord-caption {
-  font-family: var(--font-mincho);
+  font-family: var(--font-heading);
   font-size: 13px;
   letter-spacing: 0.3em;
   color: var(--mist);
@@ -295,8 +295,8 @@ a { color: var(--ruri); }
 .section__eyebrow--light { color: #a9b7e6; }
 
 .section__title {
-  font-family: var(--font-mincho);
-  font-weight: 600;
+  font-family: var(--font-heading);
+  font-weight: 700;
   font-size: clamp(26px, 3.4vw, 40px);
   line-height: 1.7;
   letter-spacing: 0.06em;
@@ -338,7 +338,7 @@ a { color: var(--ruri); }
 .problem__text strong { color: var(--ruri); }
 
 .problem__closing {
-  font-family: var(--font-mincho);
+  font-family: var(--font-heading);
   font-size: clamp(19px, 2.4vw, 26px);
   letter-spacing: 0.08em;
   text-align: center;
@@ -361,8 +361,8 @@ a { color: var(--ruri); }
 }
 
 .story__title {
-  font-family: var(--font-mincho);
-  font-weight: 600;
+  font-family: var(--font-heading);
+  font-weight: 700;
   font-size: clamp(26px, 3.4vw, 40px);
   line-height: 1.7;
   letter-spacing: 0.06em;
@@ -383,7 +383,7 @@ a { color: var(--ruri); }
 .cassette__label { fill: rgba(255, 255, 255, 0.06); stroke: #93a5dd; stroke-width: 1.5; }
 .cassette__label-text {
   fill: var(--shiro);
-  font-family: var(--font-mincho);
+  font-family: var(--font-heading);
   font-size: 22px;
   letter-spacing: 0.35em;
 }
@@ -396,7 +396,7 @@ a { color: var(--ruri); }
 .story__text p { margin-bottom: 24px; }
 
 .story__quote {
-  font-family: var(--font-mincho);
+  font-family: var(--font-heading);
   font-size: clamp(18px, 2.2vw, 24px);
   line-height: 2;
   letter-spacing: 0.06em;
@@ -410,7 +410,7 @@ a { color: var(--ruri); }
 .story__quote p:last-child { margin-bottom: 0; }
 
 .story__origin {
-  font-family: var(--font-mincho);
+  font-family: var(--font-heading);
   font-size: 20px;
   letter-spacing: 0.1em;
   color: var(--kin);
@@ -418,7 +418,7 @@ a { color: var(--ruri); }
 
 .story__signature {
   text-align: right;
-  font-family: var(--font-mincho);
+  font-family: var(--font-heading);
   font-size: 14px;
   letter-spacing: 0.2em;
   color: #a9b7e6;
@@ -466,9 +466,9 @@ a { color: var(--ruri); }
 .feature-card__icon .icon-spark { fill: var(--kin); stroke: none; }
 
 .feature-card__title {
-  font-family: var(--font-mincho);
+  font-family: var(--font-heading);
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.2em;
   margin-bottom: 14px;
 }
@@ -476,7 +476,7 @@ a { color: var(--ruri); }
 .feature-card__text { font-size: 15px; color: var(--mist); }
 
 .features__closing {
-  font-family: var(--font-mincho);
+  font-family: var(--font-heading);
   font-size: clamp(18px, 2.4vw, 24px);
   line-height: 2.2;
   letter-spacing: 0.08em;
@@ -594,8 +594,8 @@ a { color: var(--ruri); }
 .bow__knot { fill: var(--kin); }
 
 .cta-final__title {
-  font-family: var(--font-mincho);
-  font-weight: 600;
+  font-family: var(--font-heading);
+  font-weight: 700;
   font-size: clamp(28px, 4vw, 44px);
   line-height: 1.7;
   letter-spacing: 0.08em;
@@ -603,7 +603,7 @@ a { color: var(--ruri); }
 }
 
 .cta-final__list {
-  font-family: var(--font-mincho);
+  font-family: var(--font-heading);
   font-size: 15px;
   letter-spacing: 0.14em;
   color: var(--mist);

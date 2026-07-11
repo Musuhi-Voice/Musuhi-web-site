@@ -26,7 +26,8 @@ assets/img/           # favicon.svg など
   - `--yoru` #0f1b45 夜（ストーリー・フッター背景）
   - `--ink` 本文 ／ `--mist` 補足 ／ `--kasumi` 罫線 ／ `--hakuji` #f7f8fc ページ背景
   - `--kin` #c4a45f 金（差し色。多用しない）
-- **書体**: 見出し = Shippori Mincho B1 ／ 本文UI = Zen Kaku Gothic New ／ 欧文 = Inter（Google Fonts）
+- **書体**: 見出し・本文UIとも Zen Kaku Gothic New（Windows は Meiryo にフォールバック）／ 欧文 = Inter（Google Fonts）。
+  見出しは `--font-heading`、本文は `--font-gothic` トークンを使う（明朝体は2026-07に廃止済み）
 - **署名的要素**: 「声の波形が水引の結びになる」SVGコード（ヒーロー）と、最終CTAの蝶結び。
   ヒーローの縦書き見出し（`writing-mode: vertical-rl`）もアイデンティティの一部。
 - **モーション**: `.reveal`（IntersectionObserver でフェードイン）と `.draw-path`（線の描画）。
