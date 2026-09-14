@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Musuhi — その瞬間の気持ちを、声と写真で残す。| One Moment. One Voice.</title>
-  <meta name="description" content="Musuhiは、その時に感じた気持ちや頭に浮かんだ感情を声と写真で残し、AIで振り返り、大切な人にも贈れるライフログサービスです。">
+  <title data-i18n="meta.title">Musuhi — その瞬間の気持ちを、声と写真で残す。| One Moment. One Voice.</title>
+  <meta name="description" content="Musuhiは、その時に感じた気持ちや頭に浮かんだ感情を声と写真で残し、AIで振り返り、大切な人にも贈れるライフログサービスです。" data-i18n-attr="content:meta.description">
   <link rel="canonical" href="https://musuhi-voice.github.io/Musuhi-web-site/">
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
 
@@ -30,14 +30,19 @@
       <img class="site-header__wordmark" src="assets/img/wordmark.webp" alt="Musuhi" width="480" height="160">
     </a>
     <nav class="site-header__nav" aria-label="サイト内メニュー">
-      <a href="#why">なぜ、「声」なのか</a>
-      <a href="#features">Musuhiができること</a>
-      <a href="#app-experience">アプリ体験</a>
-      <a href="#story">Musuhiの原点</a>
+      <a href="#why" data-i18n="header.nav.why">なぜ、「声」なのか</a>
+      <a href="#features" data-i18n="header.nav.features">Musuhiができること</a>
+      <a href="#app-experience" data-i18n="header.nav.appExperience">アプリ体験</a>
+      <a href="#story" data-i18n="header.nav.story">Musuhiの原点</a>
     </nav>
+    <div class="lang-toggle" role="group" aria-label="Language switch / 言語切替">
+      <button type="button" class="lang-toggle__btn" data-lang="ja" aria-label="日本語に切り替える">JP</button>
+      <span class="lang-toggle__sep" aria-hidden="true">｜</span>
+      <button type="button" class="lang-toggle__btn" data-lang="en" aria-label="Switch language to English">EN</button>
+    </div>
     <!-- 公開前CTA（クリック不可）。App Store公開後は以下に置き換える:
-         <a class="btn btn--primary btn--small" href="実URL">App Store</a> -->
-    <span class="btn btn--primary btn--small btn--disabled" role="button" aria-disabled="true">App Storeでまもなく公開</span>
+         <a class="btn btn--primary btn--small" href="実URL" data-i18n="header.ctaLive">App Store</a> -->
+    <span class="btn btn--primary btn--small btn--disabled" role="button" aria-disabled="true" data-i18n="header.cta">App Storeでまもなく公開</span>
   </div>
 </header>
 
@@ -46,9 +51,9 @@
   <!-- ============ HERO ============ -->
   <section class="hero">
     <div class="hero__inner">
-      <h1 class="hero__title">その瞬間の気持ちを、<span class="hero__title-accent">声と写真</span>で残す</h1>
-      <p class="hero__lead">Musuhiは、その時に感じた気持ちを声と写真で残し、AIと振り返りながら<br>自分では気づかなかった自分を知る、そして残した声は、<br class="br-tab">大切な人へ贈ることもできる<br>ジャーナリング型ライフログサービスです</p>
-      <p class="hero__jingle">音声ジャーナリングで、<br class="br-sp">心が豊かになる新しい習慣を</p>
+      <h1 class="hero__title" data-i18n-html="hero.title">その瞬間の気持ちを、<span class="hero__title-accent">声と写真</span>で残す</h1>
+      <p class="hero__lead" data-i18n-html="hero.lead">Musuhiは、その時に感じた気持ちを声と写真で残し、AIと振り返りながら<br>自分では気づかなかった自分を知る、そして残した声は、<br class="br-tab">大切な人へ贈ることもできる<br>ジャーナリング型ライフログサービスです</p>
+      <p class="hero__jingle" data-i18n-html="hero.jingle">音声ジャーナリングで、<br class="br-sp">心が豊かになる新しい習慣を</p>
       <p class="hero__tagline" lang="en">One Moment. One Voice.</p>
     </div>
     <div class="hero__cord" aria-hidden="true">
@@ -65,28 +70,28 @@
   <!-- ============ WHY MUSUHI ============ -->
   <section class="section why" id="why">
     <div class="section__inner">
-      <h2 class="section__title">なぜ、「声」なのか</h2>
-      <p class="why__statement reveal">写真も、文字も残る<br>でも、その時の気持ちは、<br class="br-sp">残りにくい</p>
+      <h2 class="section__title" data-i18n="why.title">なぜ、「声」なのか</h2>
+      <p class="why__statement reveal" data-i18n-html="why.statement">写真も、文字も残る<br>でも、その時の気持ちは、<br class="br-sp">残りにくい</p>
       <div class="problem__grid">
         <div class="problem__col reveal">
-          <p class="problem__label">残るもの</p>
-          <p class="problem__text">スマートフォンには写真や動画が残る<br>SNSには投稿が残る<br>出来事の記録は、いくつも積み重なっていく</p>
+          <p class="problem__label" data-i18n="why.keepLabel">残るもの</p>
+          <p class="problem__text" data-i18n-html="why.keepBody">スマートフォンには写真や動画が残る<br>SNSには投稿が残る<br>出来事の記録は、いくつも積み重なっていく</p>
         </div>
         <div class="problem__col problem__col--missing reveal">
-          <p class="problem__label">残りにくいもの</p>
-          <p class="problem__text">「あの日、自分は何を感じていたんだろう。」<br>誰かに伝えたかった想い。嬉しかったこと、悔しかったこと、感謝したこと、心が揺れたこと。その瞬間に確かにあった<strong>感情</strong>は、意外なほど残っていません。</p>
+          <p class="problem__label" data-i18n="why.lostLabel">残りにくいもの</p>
+          <p class="problem__text" data-i18n-html="why.lostBody">「あの日、自分は何を感じていたんだろう。」<br>誰かに伝えたかった想い。嬉しかったこと、悔しかったこと、感謝したこと、心が揺れたこと。その瞬間に確かにあった<strong>感情</strong>は、意外なほど残っていません。</p>
         </div>
       </div>
-      <p class="why__voice reveal">写真や動画には、その瞬間の景色や姿を残せます。一方で、自分の気持ちや、まだ言葉になりきっていない想いを残したいとき、カメラに向かって話すのは少し照れくさく感じることもあります。声なら、誰かに見せるためではなく、自分に話しかけるように、その時の感情を自然に残せます。</p>
-      <p class="problem__closing reveal">声なら、自分に話しかけるように、その時の気持ちを残せる<br>あとから聞き返したとき、言葉だけでは思い出せなかった、あの日の自分の気持ちまで振り返れる<br>だからMusuhiは、<span class="why__accent">声で残すジャーナリング</span>に着目しました</p>
+      <p class="why__voice reveal" data-i18n-html="why.voice">写真や動画には、その瞬間の景色や姿を残せます。一方で、自分の気持ちや、まだ言葉になりきっていない想いを残したいとき、カメラに向かって話すのは少し照れくさく感じることもあります。声なら、誰かに見せるためではなく、自分に話しかけるように、その時の感情を自然に残せます。</p>
+      <p class="problem__closing reveal" data-i18n-html="why.closing">声なら、自分に話しかけるように、その時の気持ちを残せる<br>あとから聞き返したとき、言葉だけでは思い出せなかった、あの日の自分の気持ちまで振り返れる<br>だからMusuhiは、<span class="why__accent">声で残すジャーナリング</span>に着目しました</p>
     </div>
   </section>
 
   <!-- ============ Musuhiでできること ============ -->
   <section class="section features" id="features">
     <div class="section__inner">
-      <h2 class="section__title">Musuhiができること</h2>
-      <p class="features__intro reveal">声だから残せて、声だから伝わる<br>Musuhiは、残す・振り返る・贈るという<br class="br-sp">3つの体験で、<br>日々の気持ちを大切に重ねながら、毎日を少しずつ豊かにしていきます</p>
+      <h2 class="section__title" data-i18n="features.title">Musuhiができること</h2>
+      <p class="features__intro reveal" data-i18n-html="features.intro">声だから残せて、声だから伝わる<br>Musuhiは、残す・振り返る・贈るという<br class="br-sp">3つの体験で、<br>日々の気持ちを大切に重ねながら、毎日を少しずつ豊かにしていきます</p>
       <div class="features__grid">
         <article class="feature-card reveal">
           <div class="feature-card__icon" aria-hidden="true">
@@ -97,9 +102,9 @@
             </svg>
           </div>
           <p class="feature-card__num">01</p>
-          <h3 class="feature-card__title">残す</h3>
+          <h3 class="feature-card__title" data-i18n="features.card1.title">残す</h3>
           <p class="feature-card__name">Voice Album</p>
-          <p class="feature-card__text">その時に感じた気持ちや出来事を、声と写真で残す<br>言葉だけではこぼれてしまう感情まで、その瞬間の記録として積み重ねていきます</p>
+          <p class="feature-card__text" data-i18n-html="features.card1.body">その時に感じた気持ちや出来事を、声と写真で残す<br>言葉だけではこぼれてしまう感情まで、その瞬間の記録として積み重ねていきます</p>
         </article>
         <article class="feature-card reveal">
           <div class="feature-card__icon" aria-hidden="true">
@@ -110,9 +115,9 @@
             </svg>
           </div>
           <p class="feature-card__num">02</p>
-          <h3 class="feature-card__title">振り返る</h3>
+          <h3 class="feature-card__title" data-i18n="features.card2.title">振り返る</h3>
           <p class="feature-card__name">Weekly Reflection</p>
-          <p class="feature-card__text">1週間の声をAIと振り返り、自分では気づかなかった感情や傾向に気づく<br>今の自分を少し深く知り、自分の気持ちとやさしく向き合うきっかけに</p>
+          <p class="feature-card__text" data-i18n-html="features.card2.body">1週間の声をAIと振り返り、自分では気づかなかった感情や傾向に気づく<br>今の自分を少し深く知り、自分の気持ちとやさしく向き合うきっかけに</p>
         </article>
         <article class="feature-card reveal">
           <div class="feature-card__icon" aria-hidden="true">
@@ -124,28 +129,28 @@
             </svg>
           </div>
           <p class="feature-card__num">03</p>
-          <h3 class="feature-card__title">贈る</h3>
+          <h3 class="feature-card__title" data-i18n="features.card3.title">贈る</h3>
           <p class="feature-card__name">Voice Gift</p>
-          <p class="feature-card__text">大切な人へ、声にのせて気持ちを贈る<br>あなたの声で届けるVoice Gift<br>みんなの声を集めて、ひとつの贈りものとして届けるVoice Book</p>
+          <p class="feature-card__text" data-i18n-html="features.card3.body">大切な人へ、声にのせて気持ちを贈る<br>あなたの声で届けるVoice Gift<br>みんなの声を集めて、ひとつの贈りものとして届けるVoice Book</p>
         </article>
       </div>
-      <p class="features__closing reveal">残す・振り返る・贈る——声を通して<br>過去の自分・未来の自分・大切な人が結ばれていく<br>それが、<span class="features__closing-brand">Musuhi</span>です</p>
+      <p class="features__closing reveal" data-i18n-html="features.closing">残す・振り返る・贈る——声を通して<br>過去の自分・未来の自分・大切な人が結ばれていく<br>それが、<span class="features__closing-brand">Musuhi</span>です</p>
     </div>
   </section>
 
   <!-- ============ Musuhiのアプリ体験 ============ -->
   <section class="section app-experience" id="app-experience">
     <div class="section__inner">
-      <p class="section__eyebrow app-experience__eyebrow">Musuhiのアプリ体験</p>
+      <p class="section__eyebrow app-experience__eyebrow" data-i18n="appExperience.title">Musuhiのアプリ体験</p>
 
       <!-- メイン体験：残す→振り返る→贈る（5画面） -->
       <div class="app-experience__grid app-experience__grid--main">
         <figure class="app-experience__item reveal">
           <img class="app-experience__icon app-experience__icon--mark" src="assets/img/icon-mark.webp" alt="" aria-hidden="true" width="120" height="123">
-          <p class="app-experience__copy">感じたことを<br>声と写真でそのまま残す</p>
+          <p class="app-experience__copy" data-i18n-html="appExperience.copy1">感じたことを<br>声と写真でそのまま残す</p>
           <div class="app-experience__phone">
             <div class="app-experience__screen">
-              <img src="assets/img/app/voice-journal.webp" alt="Musuhiで声と写真を記録するVoice Journal画面" loading="lazy">
+              <img src="assets/img/app/voice-journal.webp" alt="Musuhiで声と写真を記録するVoice Journal画面" loading="lazy" data-i18n-attr="src:appExperience.img1,alt:appExperience.alt1">
             </div>
           </div>
         </figure>
@@ -153,19 +158,19 @@
           <span class="app-experience__icon" aria-hidden="true">
             <svg viewBox="0 0 40 40" fill="none"><rect x="7" y="10" width="26" height="20" rx="3" fill="#fff"/><circle cx="15" cy="17" r="2.2" fill="#2A5CAA"/><path d="M10 27l6-7 4.5 5 7-8 5.5 6.5v1.5a2 2 0 0 1-2 2H12a2 2 0 0 1-2-2Z" fill="#2A5CAA"/></svg>
           </span>
-          <p class="app-experience__copy">積み重ねた気持ちを<br>日々の記録に</p>
+          <p class="app-experience__copy" data-i18n-html="appExperience.copy2">積み重ねた気持ちを<br>日々の記録に</p>
           <div class="app-experience__phone">
             <div class="app-experience__screen">
-              <img src="assets/img/app/voice-album.webp" alt="MusuhiのVoice Album画面" loading="lazy">
+              <img src="assets/img/app/voice-album.webp" alt="MusuhiのVoice Album画面" loading="lazy" data-i18n-attr="src:appExperience.img2,alt:appExperience.alt2">
             </div>
           </div>
         </figure>
         <figure class="app-experience__item reveal">
           <img class="app-experience__icon app-experience__icon--leaf" src="assets/img/icon-leaf-white.webp" alt="" aria-hidden="true" width="120" height="112">
-          <p class="app-experience__copy">1週間の声から<br>気づかなかった自分を知る</p>
+          <p class="app-experience__copy" data-i18n-html="appExperience.copy3">1週間の声から<br>気づかなかった自分を知る</p>
           <div class="app-experience__phone">
             <div class="app-experience__screen">
-              <img src="assets/img/app/weekly-reflection.webp" alt="MusuhiのWeekly Reflection画面" loading="lazy">
+              <img src="assets/img/app/weekly-reflection.webp" alt="MusuhiのWeekly Reflection画面" loading="lazy" data-i18n-attr="src:appExperience.img3,alt:appExperience.alt3">
             </div>
           </div>
         </figure>
@@ -173,10 +178,10 @@
           <span class="app-experience__icon" aria-hidden="true">
             <svg viewBox="0 0 40 40" fill="none"><path d="M8 18h24v13a2 2 0 0 1-2 2H10a2 2 0 0 1-2-2Z" fill="#fff"/><rect x="7" y="13" width="26" height="6" rx="1.5" fill="#fff"/><path d="M20 13c-4 0-7-2-5.5-5C16 5 20 9 20 13c0-4 4-8 5.5-5C27 11 24 13 20 13Z" fill="#fff"/></svg>
           </span>
-          <p class="app-experience__copy">伝えたい気持ちを<br>大切な人へ</p>
+          <p class="app-experience__copy" data-i18n-html="appExperience.copy4">伝えたい気持ちを<br>大切な人へ</p>
           <div class="app-experience__phone">
             <div class="app-experience__screen">
-              <img src="assets/img/app/voice-gift.webp" alt="MusuhiのVoice Gift画面" loading="lazy">
+              <img src="assets/img/app/voice-gift.webp" alt="MusuhiのVoice Gift画面" loading="lazy" data-i18n-attr="src:appExperience.img4,alt:appExperience.alt4">
             </div>
           </div>
         </figure>
@@ -184,10 +189,10 @@
           <span class="app-experience__icon" aria-hidden="true">
             <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="14" r="5.5" fill="#fff"/><path d="M10 30c0-5.5 4.5-9 10-9s10 3.5 10 9" fill="#fff"/><circle cx="8" cy="18" r="4" fill="#fff" opacity=".55"/><circle cx="32" cy="18" r="4" fill="#fff" opacity=".55"/></svg>
           </span>
-          <p class="app-experience__copy">みんなの想いを<br>ひとつの贈りものに</p>
+          <p class="app-experience__copy" data-i18n-html="appExperience.copy5">みんなの想いを<br>ひとつの贈りものに</p>
           <div class="app-experience__phone">
             <div class="app-experience__screen">
-              <img src="assets/img/app/voice-book.webp" alt="MusuhiのVoice Book画面" loading="lazy">
+              <img src="assets/img/app/voice-book.webp" alt="MusuhiのVoice Book画面" loading="lazy" data-i18n-attr="src:appExperience.img5,alt:appExperience.alt5">
             </div>
           </div>
         </figure>
@@ -195,8 +200,8 @@
 
       <!-- つなぎ：小見出し＋導入コピー -->
       <div class="app-experience__more reveal">
-        <p class="app-experience__more-eyebrow">使い続けるほど、育っていく</p>
-        <p class="app-experience__more-lead">残した声は、ひとつのMomentとして<br class="br-sp">形に残り、積み重ねるほど育っていきます</p>
+        <p class="app-experience__more-eyebrow" data-i18n="appExperience.moreEyebrow">使い続けるほど、育っていく</p>
+        <p class="app-experience__more-lead" data-i18n-html="appExperience.moreLead">残した声は、ひとつのMomentとして<br class="br-sp">形に残り、積み重ねるほど育っていきます</p>
       </div>
 
       <!-- 補足体験：Journal Detail / Voice Garden（2画面・3本柱の新しい柱ではない） -->
@@ -205,19 +210,19 @@
           <span class="app-experience__icon" aria-hidden="true">
             <svg viewBox="0 0 40 40" fill="none"><rect x="7" y="10" width="26" height="20" rx="3" fill="#fff"/><circle cx="15" cy="17" r="2.2" fill="#2A5CAA"/><path d="M10 27l6-7 4.5 5 7-8 5.5 6.5v1.5a2 2 0 0 1-2 2H12a2 2 0 0 1-2-2Z" fill="#2A5CAA"/></svg>
           </span>
-          <p class="app-experience__copy">残した声は<br>ひとつのMomentとして形に残る</p>
+          <p class="app-experience__copy" data-i18n-html="appExperience.copy6">残した声は<br>ひとつのMomentとして形に残る</p>
           <div class="app-experience__phone">
             <div class="app-experience__screen">
-              <img src="assets/img/app/journal-detail.webp" alt="MusuhiのMoment詳細画面" loading="lazy">
+              <img src="assets/img/app/journal-detail.webp" alt="MusuhiのMoment詳細画面" loading="lazy" data-i18n-attr="src:appExperience.img6,alt:appExperience.alt6">
             </div>
           </div>
         </figure>
         <figure class="app-experience__item reveal">
           <img class="app-experience__icon app-experience__icon--leaf" src="assets/img/icon-leaf-white.webp" alt="" aria-hidden="true" width="120" height="112">
-          <p class="app-experience__copy">積み重ねた気持ちが<br>育っていく</p>
+          <p class="app-experience__copy" data-i18n-html="appExperience.copy7">積み重ねた気持ちが<br>育っていく</p>
           <div class="app-experience__phone">
             <div class="app-experience__screen">
-              <img src="assets/img/app/voice-garden.webp" alt="MusuhiのVoice Garden画面" loading="lazy">
+              <img src="assets/img/app/voice-garden.webp" alt="MusuhiのVoice Garden画面" loading="lazy" data-i18n-attr="src:appExperience.img7,alt:appExperience.alt7">
             </div>
           </div>
         </figure>
@@ -228,7 +233,7 @@
   <!-- ============ Musuhiの原点 ============ -->
   <section class="story" id="story">
     <div class="section__inner">
-      <h2 class="section__title story__title">Musuhiの原点</h2>
+      <h2 class="section__title story__title" data-i18n="story.title">Musuhiの原点</h2>
       <div class="story__body">
         <figure class="story__cassette reveal">
           <div class="story__cassette-frame">
@@ -237,17 +242,17 @@
           </div>
         </figure>
         <div class="story__text">
-          <p class="reveal">私の父は、幼い頃の私へ向けて、「敏康 成長記」と書かれたカセットテープを残してくれていました。</p>
-          <p class="reveal">そこには、写真では伝わらない——父の声、笑い方、話す間、その時の感情や想いが、そのまま残っていました。</p>
+          <p class="reveal" data-i18n="story.p1">私の父は、幼い頃の私へ向けて、「敏康 成長記」と書かれたカセットテープを残してくれていました。</p>
+          <p class="reveal" data-i18n="story.p2">そこには、写真では伝わらない——父の声、笑い方、話す間、その時の感情や想いが、そのまま残っていました。</p>
           <blockquote class="story__quote reveal">
-            <p>声には、その人の想いまで残る</p>
-            <p>人は、直接面と向かっては言わないことでも、<br>何かを媒介することで伝えやすくなる</p>
+            <p data-i18n="story.quote1">声には、その人の想いまで残る</p>
+            <p data-i18n-html="story.quote2">人は、直接面と向かっては言わないことでも、<br>何かを媒介することで伝えやすくなる</p>
           </blockquote>
-          <p class="reveal">年月が経ってからその声を聞いたとき、懐かしさとあわせて、父の想いや、自分が大切にされていたことまで伝わってくるように感じました。</p>
-          <p class="reveal">声は、時間が経っても、その人の気持ちまで残してくれる。</p>
-          <p class="reveal">そして声には、人の心を支え、前を向く力をくれることがあるのだと感じたことを、今でも覚えています。</p>
-          <p class="story__origin reveal">この体験が、Musuhiの原点です</p>
-          <p class="story__signature reveal">Musuhi　中村敏康</p>
+          <p class="reveal" data-i18n="story.p3">年月が経ってからその声を聞いたとき、懐かしさとあわせて、父の想いや、自分が大切にされていたことまで伝わってくるように感じました。</p>
+          <p class="reveal" data-i18n="story.p4">声は、時間が経っても、その人の気持ちまで残してくれる。</p>
+          <p class="reveal" data-i18n="story.p5">そして声には、人の心を支え、前を向く力をくれることがあるのだと感じたことを、今でも覚えています。</p>
+          <p class="story__origin reveal" data-i18n="story.origin">この体験が、Musuhiの原点です</p>
+          <p class="story__signature reveal" data-i18n="story.signature">Musuhi　中村敏康</p>
         </div>
       </div>
     </div>
@@ -267,13 +272,13 @@
           </g>
         </svg>
       </div>
-      <h2 class="cta-final__title">今日、あなたの心が<br class="br-sp">動いた瞬間は？</h2>
-      <p class="cta-final__list reveal">嬉しかったこと　感謝したこと　挑戦したこと　心が少し揺れたこと</p>
-      <p class="cta-final__lead reveal">その瞬間を、声と写真で残してみませんか<br>今日の気持ちを、あなたの最初のMomentとして残せます</p>
+      <h2 class="cta-final__title" data-i18n-html="ctaFinal.title">今日、あなたの心が<br class="br-sp">動いた瞬間は？</h2>
+      <p class="cta-final__list reveal" data-i18n="ctaFinal.list">嬉しかったこと　感謝したこと　挑戦したこと　心が少し揺れたこと</p>
+      <p class="cta-final__lead reveal" data-i18n-html="ctaFinal.lead">その瞬間を、声と写真で残してみませんか<br>今日の気持ちを、あなたの最初のMomentとして残せます</p>
       <div class="cta-final__action reveal">
         <!-- 公開前CTA（クリック不可）。App Store公開後は以下に置き換える:
-             <a class="btn btn--primary btn--large" href="実URL">App StoreでMusuhiをはじめる</a> -->
-        <span class="btn btn--primary btn--large btn--disabled" role="button" aria-disabled="true">App Storeでまもなく公開</span>
+             <a class="btn btn--primary btn--large" href="実URL" data-i18n="ctaFinal.buttonLive">App StoreでMusuhiをはじめる</a> -->
+        <span class="btn btn--primary btn--large btn--disabled" role="button" aria-disabled="true" data-i18n="ctaFinal.button">App Storeでまもなく公開</span>
       </div>
       <div class="cta-final__brand reveal">
         <p class="cta-final__tagline" lang="en">One Moment. One Voice.</p>
@@ -281,7 +286,7 @@
           <img class="cta-final__brandmark-icon" src="assets/img/app-icon.webp" alt="" width="128" height="128">
           <img class="cta-final__brandmark-word" src="assets/img/wordmark.webp" alt="Musuhi" width="480" height="160">
         </div>
-        <p class="cta-final__brand-line">声からはじまる、自分との対話　人とのつながり</p>
+        <p class="cta-final__brand-line" data-i18n-html="ctaFinal.brandLine">声からはじまる、自分との対話　人とのつながり</p>
       </div>
     </div>
   </section>
@@ -292,9 +297,9 @@
   <div class="site-footer__inner">
     <p class="site-footer__logo">Musuhi</p>
     <nav class="site-footer__nav" aria-label="フッターメニュー">
-      <a href="https://continuous-cattle-c49.notion.site/Musuhi-3d0a24bc388980d7ab1cd5ecba7b39ce">プライバシーポリシー</a>
-      <a href="https://continuous-cattle-c49.notion.site/Musuhi-398a24bc3889808eb4f2f0b8d73727ff">利用規約</a>
-      <a href="mailto:info@musuhi-voice.com">お問い合わせ</a>
+      <a href="https://continuous-cattle-c49.notion.site/Musuhi-3d0a24bc388980d7ab1cd5ecba7b39ce" data-i18n="footer.privacy">プライバシーポリシー</a>
+      <a href="https://continuous-cattle-c49.notion.site/Musuhi-398a24bc3889808eb4f2f0b8d73727ff" data-i18n="footer.terms">利用規約</a>
+      <a href="mailto:info@musuhi-voice.com" data-i18n="footer.contact">お問い合わせ</a>
     </nav>
     <!-- note: コンテンツ未整備のため非表示（準備でき次第、追加する） -->
     <nav class="site-footer__social" aria-label="SNS">
@@ -302,7 +307,7 @@
       <a href="https://www.instagram.com/musuhi.voice/">Instagram</a>
     </nav>
     <p class="site-footer__copy" lang="en">© 2026 Musuhi. All rights reserved.</p>
-    <p class="site-footer__org">運営：CrossOver</p>
+    <p class="site-footer__org" data-i18n="footer.org">運営：CrossOver</p>
   </div>
 </footer>
 
