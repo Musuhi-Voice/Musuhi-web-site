@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>サポート | Musuhi</title>
-  <meta name="description" content="Musuhiのサポート窓口です。お困りのことがありましたら、メールにてお問い合わせください。">
+  <title data-i18n="support.metaTitle">サポート | Musuhi</title>
+  <meta name="description" content="Musuhiのサポート窓口です。お困りのことがありましたら、メールにてお問い合わせください。" data-i18n-attr="content:support.metaDescription">
   <link rel="canonical" href="https://musuhi-voice.github.io/Musuhi-web-site/support.html">
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
 
@@ -16,31 +16,36 @@
 <body>
 
 <header class="site-header" id="site-header">
-  <div class="site-header__inner">
+  <div class="site-header__inner site-header__inner--right">
     <a class="site-header__logo" href="index.html">
       <img class="site-header__icon" src="assets/img/app-icon.webp" alt="" width="128" height="128">
       <img class="site-header__wordmark" src="assets/img/wordmark.webp" alt="Musuhi" width="480" height="160">
     </a>
+    <div class="lang-toggle" role="group" aria-label="Language switch / 言語切替">
+      <button type="button" class="lang-toggle__btn" data-lang="ja" aria-label="日本語に切り替える">JP</button>
+      <span class="lang-toggle__sep" aria-hidden="true">｜</span>
+      <button type="button" class="lang-toggle__btn" data-lang="en" aria-label="Switch language to English">EN</button>
+    </div>
   </div>
 </header>
 
 <main>
   <section class="section support-page">
     <div class="section__inner support-page__inner">
-      <h1 class="section__title">サポート</h1>
-      <p class="support-page__lead">Musuhiについてお困りのことが<br class="br-sp">ありましたら、<br>下記メールアドレスまで<br class="br-sp">お問い合わせください。</p>
+      <h1 class="section__title" data-i18n="support.title">サポート</h1>
+      <p class="support-page__lead" data-i18n-html="support.lead">Musuhiについてお困りのことが<br class="br-sp">ありましたら、<br>下記メールアドレスまで<br class="br-sp">お問い合わせください。</p>
 
       <div class="support-page__contact">
-        <p class="support-page__contact-label">お問い合わせ先</p>
+        <p class="support-page__contact-label" data-i18n="support.contactLabel">お問い合わせ先</p>
         <a class="support-page__contact-email" href="mailto:info@musuhi-voice.com">info@musuhi-voice.com</a>
       </div>
 
       <div class="support-page__legal">
-        <a href="https://continuous-cattle-c49.notion.site/Musuhi-3d0a24bc388980d7ab1cd5ecba7b39ce">プライバシーポリシー</a>
-        <a href="https://continuous-cattle-c49.notion.site/Musuhi-398a24bc3889808eb4f2f0b8d73727ff">利用規約</a>
+        <a href="https://continuous-cattle-c49.notion.site/Musuhi-3d0a24bc388980d7ab1cd5ecba7b39ce" data-i18n="support.legalPrivacy">プライバシーポリシー</a>
+        <a href="https://continuous-cattle-c49.notion.site/Musuhi-398a24bc3889808eb4f2f0b8d73727ff" data-i18n="support.legalTerms">利用規約</a>
       </div>
 
-      <a class="support-page__back" href="index.html">← Musuhi公式サイトへ戻る</a>
+      <a class="support-page__back" href="index.html" data-i18n="support.back">← Musuhi公式サイトへ戻る</a>
     </div>
   </section>
 </main>
@@ -49,9 +54,9 @@
   <div class="site-footer__inner">
     <p class="site-footer__logo">Musuhi</p>
     <nav class="site-footer__nav" aria-label="フッターメニュー">
-      <a href="https://continuous-cattle-c49.notion.site/Musuhi-3d0a24bc388980d7ab1cd5ecba7b39ce">プライバシーポリシー</a>
-      <a href="https://continuous-cattle-c49.notion.site/Musuhi-398a24bc3889808eb4f2f0b8d73727ff">利用規約</a>
-      <a href="mailto:info@musuhi-voice.com">お問い合わせ</a>
+      <a href="https://continuous-cattle-c49.notion.site/Musuhi-3d0a24bc388980d7ab1cd5ecba7b39ce" data-i18n="footer.privacy">プライバシーポリシー</a>
+      <a href="https://continuous-cattle-c49.notion.site/Musuhi-398a24bc3889808eb4f2f0b8d73727ff" data-i18n="footer.terms">利用規約</a>
+      <a href="mailto:info@musuhi-voice.com" data-i18n="footer.contact">お問い合わせ</a>
     </nav>
     <!-- note: コンテンツ未整備のため非表示（準備でき次第、追加する） -->
     <nav class="site-footer__social" aria-label="SNS">
@@ -59,9 +64,10 @@
       <a href="https://www.instagram.com/musuhi.voice/">Instagram</a>
     </nav>
     <p class="site-footer__copy" lang="en">© 2026 Musuhi. All rights reserved.</p>
-    <p class="site-footer__org">運営：CrossOver</p>
+    <p class="site-footer__org" data-i18n="footer.org">運営：CrossOver</p>
   </div>
 </footer>
 
+<script src="assets/js/main.js" defer></script>
 </body>
 </html>
