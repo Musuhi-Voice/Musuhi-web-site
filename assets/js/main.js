@@ -15,8 +15,8 @@
       'header.nav.features': 'Musuhiができること',
       'header.nav.appExperience': 'アプリ体験',
       'header.nav.story': 'Musuhiの原点',
-      'header.cta': 'App Storeでまもなく公開',
-      'header.ctaLive': 'App Store',
+      'header.cta': 'App Store',
+      'header.ctaHref': 'https://apps.apple.com/jp/app/musuhi/id6808240697',
 
       'hero.title': 'その瞬間の気持ちを、<span class="hero__title-accent">声と写真</span>で残す',
       'hero.lead': 'Musuhiは、その時に感じた気持ちを声と写真で残し、AIと振り返りながら<br>自分では気づかなかった自分を知る、そして残した声は、<br class="br-tab">大切な人へ贈ることもできる<br>ジャーナリング型ライフログサービスです',
@@ -80,8 +80,8 @@
       'ctaFinal.title': '今日、あなたの心が<br class="br-sp">動いた瞬間は？',
       'ctaFinal.list': '嬉しかったこと　感謝したこと　挑戦したこと　心が少し揺れたこと',
       'ctaFinal.lead': 'その瞬間を、声と写真で残してみませんか<br>今日の気持ちを、あなたの最初のMomentとして残せます',
-      'ctaFinal.button': 'App Storeでまもなく公開',
-      'ctaFinal.buttonLive': 'App StoreでMusuhiをはじめる',
+      'ctaFinal.button': 'App StoreでMusuhiをはじめる',
+      'ctaFinal.buttonHref': 'https://apps.apple.com/jp/app/musuhi/id6808240697',
       'ctaFinal.brandLine': '声からはじまる、自分との対話　人とのつながり',
 
       'footer.privacy': 'プライバシーポリシー',
@@ -106,8 +106,8 @@
       'header.nav.features': 'What You Can Do',
       'header.nav.appExperience': 'Experience Musuhi',
       'header.nav.story': 'The Story Behind Musuhi',
-      'header.cta': 'Coming Soon',
-      'header.ctaLive': 'Download on the App Store',
+      'header.cta': 'App Store',
+      'header.ctaHref': 'https://apps.apple.com/us/app/musuhi/id6808240697',
 
       'hero.title': 'Capture how you feel, in <span class="hero__title-accent">your voice and photos</span>.',
       'hero.lead': 'Musuhi is a voice journaling app that helps you capture how you feel through voice and photos, reflect with AI, and discover things about yourself you may not have noticed before. You can also turn the voices you’ve saved into meaningful gifts for the people you care about.',
@@ -171,8 +171,8 @@
       'ctaFinal.title': 'What moved you today?',
       'ctaFinal.list': 'Something that made you happy　Something you’re grateful for　Something you tried　A moment that moved you',
       'ctaFinal.lead': 'Why not capture that moment in your voice and a photo?<br>Your first Moment can start with how you feel today.',
-      'ctaFinal.button': 'Coming Soon on the App Store',
-      'ctaFinal.buttonLive': 'Download Musuhi on the App Store',
+      'ctaFinal.button': 'Download Musuhi on the App Store',
+      'ctaFinal.buttonHref': 'https://apps.apple.com/us/app/musuhi/id6808240697',
       'ctaFinal.brandLine': 'A conversation with yourself.<br>A connection with someone you care about.<br>It all begins with your voice.',
 
       'footer.privacy': 'Privacy Policy',

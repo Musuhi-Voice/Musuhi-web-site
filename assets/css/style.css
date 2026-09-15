@@ -132,13 +132,6 @@ a { color: var(--ruri); }
 
 .btn--large { padding: 20px 52px; font-size: 18px; }
 
-.btn--disabled {
-  pointer-events: none;
-  cursor: default;
-  opacity: 0.85; /* 公開前CTA: CTAとして認識できる見た目のまま、通常CTAよりほんの少し控えめに */
-  box-shadow: none;
-}
-
 /* --------------------------------------------------------------------------
    ヘッダー
    -------------------------------------------------------------------------- */
@@ -1012,7 +1005,7 @@ a { color: var(--ruri); }
 
   .br-tab { display: inline; }
 
-  /* 公開前CTA「App Storeでまもなく公開」が通常より長いため、Tablet幅でHeaderが収まるよう調整 */
+  /* Nav文言＋言語切替＋CTAの合計幅がTablet幅を超えないよう調整 */
   .site-header__inner { gap: 10px; }
 
   .site-header__nav { gap: 10px; }
