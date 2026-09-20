@@ -132,6 +132,15 @@ a { color: var(--ruri); }
 
 .btn--large { padding: 20px 52px; font-size: 18px; }
 
+/* Final CTA: 狭幅で右端が切れないよう左右paddingのみ縮小（font-sizeは不変）。ENは収まらない幅でのみ折り返す */
+@media (max-width: 480px) {
+  .btn--large { padding-left: 28px; padding-right: 28px; max-width: 100%; }
+  html:lang(en) .btn--large { white-space: normal; text-wrap: balance; text-align: center; }
+}
+@media (max-width: 360px) {
+  .btn--large { padding-left: 16px; padding-right: 16px; }
+}
+
 /* --------------------------------------------------------------------------
    ヘッダー
    -------------------------------------------------------------------------- */
@@ -346,12 +355,255 @@ a { color: var(--ruri); }
 }
 
 /* --------------------------------------------------------------------------
+   Brand Story（Why Now / Philosophy / Voice Album / Weekly Reflection /
+   Connection / Vision）— 「章」として読ませる共通構造
+   既存のTypography・色トークンのみを使用し、新しい色・大量のpx値は追加しない。
+   -------------------------------------------------------------------------- */
+.ph { display: inline-block; } /* 日本語タイトルの句単位改行（句の途中で折り返さない） */
+
+.ln { display: block; text-wrap: balance; } /* 原稿の1行=1ブロック。幅が足りなくても各行が均等に折り返され、孤立行を作らない */
+
+.chapter__inner { text-align: center; }
+
+/* 日本語を文節単位で折り返す（対応ブラウザのみ。非対応でも通常の折り返しにフォールバック）。
+   狭い画面で「つなが/り」のような単語途中の改行を減らし、読みやすさを保つ */
+.chapter { word-break: auto-phrase; }
+
+.chapter--white { background: var(--shiro); }
+
+.chapter__icon {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: var(--ruri);
+  display: grid;
+  place-items: center;
+  margin: 0 auto 24px;
+}
+
+.chapter__icon svg {
+  width: 40px;
+  height: 40px;
+  stroke: var(--shiro);
+  stroke-width: 2.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.chapter__icon--fill svg { stroke: none; width: 54px; height: 54px; } /* Nativeのfill系シンボル（photo / gift 等）を再現したSVG。線アイコン用の白stroke指定を打ち消す */
+
+.chapter__icon img { display: block; width: 40px; height: auto; } /* Weekly Reflection: Native Garden brand asset（単色白シルエット） */
+
+.chapter__eyebrow { text-align: center; margin-bottom: 14px; }
+
+.chapter__title {
+  max-width: 980px;
+  margin: 0 auto 44px;
+  text-wrap: balance;
+}
+
+.chapter__body { max-width: 780px; margin: 0 auto; }
+
+.chapter__text {
+  font-family: var(--font-hero);
+  font-weight: var(--fw-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--ink);
+  margin: 0 0 28px;
+  text-wrap: balance;
+}
+
+.chapter__text--lead { margin-bottom: 8px; } /* 直後の強調文と一続きに読ませる */
+
+.chapter__em {
+  font-family: var(--font-hero);
+  font-weight: var(--fw-heading);
+  font-size: var(--fs-app-copy);
+  line-height: 1.9;
+  color: var(--yoru);
+  margin: 0 0 28px;
+  text-wrap: balance;
+}
+
+.chapter__em--lead { margin-bottom: 8px; }
+
+.chapter__body > :last-child { margin-bottom: 0; }
+
+/* 言語によって不要になる段落（JPとENで段落の切り方が異なる箇所）は非表示 */
+.chapter__text:empty,
+.chapter__em:empty { display: none; }
+
+.chapter__closing {
+  font-family: var(--font-hero);
+  font-weight: var(--fw-heading);
+  font-size: var(--fs-subtitle);
+  line-height: 1.9;
+  letter-spacing: 0.02em;
+  color: var(--yoru);
+  max-width: 780px;
+  margin: 56px auto 0;
+  text-wrap: balance;
+}
+
+/* 水引5本を思わせる細い横線（eyebrowと同じモチーフ）で、締めのコピーを静かに区切る */
+.chapter__closing::before,
+.chapter__endings::before {
+  content: "";
+  display: block;
+  width: 34px;
+  height: 5px;
+  margin: 0 auto 28px;
+  background: repeating-linear-gradient(
+    to bottom,
+    var(--ruri) 0, var(--ruri) 1px,
+    transparent 1px, transparent 2px
+  );
+}
+
+/* 旧「Musuhiができること」Closingの表現を再利用（水引区切りなし・やや大きめ・Musuhiのみ瑠璃色） */
+.chapter__closing--brand {
+  font-size: clamp(18px, 2.4vw, 24px);
+  line-height: 2.2;
+  letter-spacing: 0.04em;
+  margin-top: 56px;
+}
+
+.chapter__closing--brand::before { display: none; }
+
+.chapter__brand-accent { color: var(--ruri); }
+
+.chapter__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-top: 44px;
+  text-align: left;
+}
+
+.chapter__block {
+  background: var(--shiro);
+  border: 1px solid var(--kasumi);
+  border-top: 3px solid var(--ruri);
+  border-radius: 16px;
+  padding: 36px;
+}
+
+.chapter--white .chapter__block { background: var(--hakuji); } /* 白背景のsection上では白磁のカード */
+
+.chapter__block-title {
+  font-family: var(--font-hero);
+  font-size: var(--fs-subtitle);
+  font-weight: var(--fw-heading);
+  line-height: var(--lh-card-title);
+  letter-spacing: 0.06em;
+  color: var(--yoru);
+  margin-bottom: 14px;
+}
+
+.chapter__block-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.chapter__block-icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--ruri);
+  display: grid;
+  place-items: center;
+}
+
+.chapter__block-icon svg { width: 30px; height: 30px; }
+
+.chapter__block-label {
+  font-family: var(--font-hero);
+  font-size: var(--fs-eyebrow);
+  font-weight: var(--fw-heading);
+  letter-spacing: 0.14em;
+  color: var(--ruri);
+  margin-bottom: 14px;
+}
+
+.chapter__block-head .chapter__block-label { margin-bottom: 0; }
+
+/* Voice Bookのユースケース（補助情報。小さなタグ） */
+.chapter__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin-top: 20px;
+}
+
+.chapter__chip {
+  font-family: var(--font-hero);
+  font-size: var(--fs-secondary);
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: 0.04em;
+  color: var(--ruri);
+  background: var(--shiro);
+  border: 1px solid var(--kasumi);
+  border-radius: 999px;
+  padding: 4px 14px;
+}
+
+.chapter__block-text {
+  font-family: var(--font-hero);
+  font-weight: var(--fw-body);
+  font-size: var(--fs-card-body);
+  line-height: 1.8;
+  color: var(--ink);
+  margin-bottom: 16px;
+  text-wrap: balance;
+}
+
+.chapter__block-text:last-child { margin-bottom: 0; }
+
+.chapter__block-text--em {
+  font-weight: var(--fw-heading);
+  color: var(--yoru);
+}
+
+.chapter__block-text--lead { margin-bottom: 4px; } /* 直後の強調文へ一続きの文として読ませる */
+
+/* Vision — 通常sectionより少し静かで余韻のある見せ方（既存ruriの淡いtintのみ） */
+.vision { background: rgba(42, 92, 170, 0.05); }
+
+.chapter__endings { max-width: 780px; margin: 64px auto 0; }
+
+.chapter__ending {
+  font-family: var(--font-hero);
+  font-weight: var(--fw-heading);
+  font-size: var(--fs-subtitle);
+  line-height: 1.9;
+  letter-spacing: 0.02em;
+  color: var(--ruri);
+  margin: 0 0 28px;
+  text-wrap: balance;
+}
+
+.chapter__ending:last-child { margin-bottom: 0; }
+
+/* --------------------------------------------------------------------------
+   Why Now — ヒーロー直下。水引との間隔を詰め、次のPhilosophyと地続きで読ませる
+   -------------------------------------------------------------------------- */
+.why-now { padding-top: 40px; padding-bottom: 70px; }
+
+.philosophy { padding-top: 70px; } /* Why Nowと同じ背景色のため、余白を二重にしない */
+
+/* --------------------------------------------------------------------------
    Why Musuhi
    Hero でFIXしたフォント方針（Zen Maru Gothic・#2A5CAA）に合わせる。
    他セクションが使う .section__title 等の共有クラスは上書きせず、
    .why 配下にのみスコープして影響範囲を限定する。
    -------------------------------------------------------------------------- */
-.why { padding-top: 40px; } /* 水引との間隔をさらに詰める */
+.why { padding-bottom: 70px; } /* 直後のアプリ体験と同じ背景色のため、余白を二重にしない */
 
 .why .section__title { margin-bottom: 20px; }
 
@@ -419,6 +671,7 @@ a { color: var(--ruri); }
   font-size: var(--fs-card-body);
   line-height: 1.8;
   color: var(--ink);
+  text-wrap: pretty; /* 最終行に1語だけ残る折り返し（例: 「lose.」）を避ける。文言・サイズは不変 */
 }
 
 .problem__text strong { color: var(--ruri); font-weight: 700; }
@@ -530,107 +783,6 @@ a { color: var(--ruri); }
   letter-spacing: 0.2em;
   color: var(--mist-deep);
   margin-top: 40px;
-}
-
-/* --------------------------------------------------------------------------
-   Musuhiでできること
-   -------------------------------------------------------------------------- */
-.features { background: var(--shiro); }
-
-.features__intro {
-  font-family: var(--font-hero);
-  font-weight: var(--fw-body);
-  font-size: var(--fs-body);
-  line-height: var(--lh-body);
-  max-width: 960px;
-  margin: 0 auto 48px;
-  text-align: center;
-  color: var(--ink);
-}
-
-.features__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-  margin-bottom: 64px;
-  align-items: stretch;
-}
-
-.feature-card {
-  display: flex;
-  flex-direction: column;
-  background: var(--hakuji);
-  border-radius: 20px;
-  padding: 40px 32px;
-}
-
-.feature-card__icon {
-  width: 76px;
-  height: 76px;
-  border-radius: 50%;
-  background: var(--ruri);
-  display: grid;
-  place-items: center;
-  margin-bottom: 24px;
-}
-
-.feature-card__icon svg {
-  width: 40px;
-  height: 40px;
-  stroke: var(--shiro);
-  stroke-width: 2.8;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.feature-card__icon .icon-spark { fill: var(--kin); stroke: none; }
-
-.feature-card__num {
-  font-family: var(--font-latin);
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  color: var(--kin);
-  margin-bottom: 8px;
-}
-
-.feature-card__title {
-  font-family: var(--font-hero);
-  font-size: var(--fs-subtitle);
-  font-weight: var(--fw-heading);
-  line-height: var(--lh-card-title);
-  letter-spacing: 0.06em;
-  color: var(--yoru);
-  margin-bottom: 8px;
-}
-
-.feature-card__name {
-  font-family: var(--font-hero);
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  color: var(--ruri);
-  margin-bottom: 14px;
-}
-
-.feature-card__text {
-  font-family: var(--font-hero);
-  font-weight: var(--fw-body);
-  font-size: var(--fs-card-body);
-  line-height: 1.8;
-  color: var(--ink);
-}
-
-.features__closing-brand { color: var(--ruri); }
-
-.features__closing {
-  font-family: var(--font-hero);
-  font-weight: 700;
-  font-size: clamp(18px, 2.4vw, 24px);
-  line-height: 2.2;
-  letter-spacing: 0.04em;
-  color: var(--yoru);
-  text-align: center;
 }
 
 /* --------------------------------------------------------------------------
@@ -752,7 +904,7 @@ a { color: var(--ruri); }
    最終CTA — 結びが完成する場所
    -------------------------------------------------------------------------- */
 .cta-final {
-  padding: 130px 24px 120px;
+  padding: 100px 24px 120px; /* 直前のVision（淡い背景）からの自然な接続のため上余白のみ調整 */
   text-align: center;
   background:
     radial-gradient(ellipse 800px 400px at 50% 120%, rgba(42, 92, 170, 0.08), transparent),
@@ -996,9 +1148,14 @@ a { color: var(--ruri); }
 /* --------------------------------------------------------------------------
    レスポンシブ
    -------------------------------------------------------------------------- */
-@media (max-width: 900px) {
-  .features__intro { max-width: 600px; }
+/* 英語表示のみ: Nav5項目（VISION追加後）が901〜1040pxでCTAを押し出さないよう、余白とNav文字を少し詰める */
+@media (min-width: 901px) and (max-width: 1040px) {
+  html[lang="en"] .site-header__inner { gap: 14px; }
+  html[lang="en"] .site-header__nav { gap: 12px; }
+  html[lang="en"] .site-header__nav a { font-size: 14px; }
+}
 
+@media (max-width: 900px) {
   .hero__title { font-size: clamp(24px, 3.6vw, 29px); max-width: 620px; }
 
   .hero__lead { font-size: 20px; max-width: 100%; }
@@ -1029,7 +1186,7 @@ a { color: var(--ruri); }
   html[lang="en"] .site-header .btn--small { font-size: 12px; padding: 8px 12px; }
 
   .problem__grid,
-  .features__grid { grid-template-columns: 1fr; }
+  .chapter__grid { grid-template-columns: 1fr; }
 
   .story__body { grid-template-columns: 1fr; gap: 40px; }
 
@@ -1060,6 +1217,27 @@ a { color: var(--ruri); }
 
   .section__eyebrow { font-size: 14px; }
 
+  /* Brand Story: Mobileでは同じ背景色の隣接sectionの余白を詰め、ページが間延びしないようにする */
+  .why-now { padding-bottom: 56px; }
+
+  .philosophy { padding-top: 56px; }
+
+  .why { padding-bottom: 56px; }
+
+  .chapter__title { margin-bottom: 32px; }
+
+  .chapter__text { margin-bottom: 24px; }
+
+  .chapter__em { font-size: var(--fs-body); margin-bottom: 24px; }
+
+  .chapter__text--lead, .chapter__em--lead { margin-bottom: 8px; }
+
+  .chapter__closing { margin-top: 44px; }
+
+  .chapter__endings { margin-top: 48px; }
+
+  .chapter__block { padding: 28px 24px; }
+
   .story { padding: 90px 20px; }
 
   .problem__col { padding: 28px 24px; }
@@ -1074,7 +1252,7 @@ a { color: var(--ruri); }
 
   .app-experience__more { margin: 64px auto 32px; }
 
-  .cta-final { padding: 100px 20px 90px; }
+  .cta-final { padding: 80px 20px 90px; }
 
   .cta-final__list { line-height: 2.4; }
 }
