@@ -32,6 +32,8 @@
       'why.closing': '<span class="ln"><span class="ph">声なら</span><span class="ph">自分に話しかけるように、</span><span class="ph">その時の気持ちを</span><span class="ph">残せる</span></span><span class="ln"><span class="ph">あとから聞き返したとき、</span><span class="ph">言葉だけでは</span><span class="ph">思い出せなかった、</span><span class="ph">あの日の自分の</span><span class="ph">気持ちまで</span><span class="ph">振り返れる</span></span><span class="ln"><span class="ph">だからMusuhiは</span><span class="ph"><span class="why__accent">声で残すジャーナリング</span></span><span class="ph">に着目しました</span></span>',
 
       'whyNow.title': '<span class="ph">便利で快適になった</span><span class="ph">毎日の中で、</span><span class="ph">見えにくくなったもの</span>',
+      'whyNow.visualImg': 'assets/img/brand/why-now-polaroid-collage.webp',
+      'whyNow.visualAlt': 'さまざまな日常の感情や大切な人とのつながりを表すポラロイド写真',
       'whyNow.g1': '<span class="ln">暮らしはますます速く便利で快適になり、デジタル化も進んでいます。</span><span class="ln">私たちはいつでも誰かとつながり、これまで以上に多くの情報や出来事を残せるようになりました。</span>',
       'whyNow.g2': '<span class="ln">その一方で</span><span class="ln">自分自身と向き合う時間は、意識しなければ日々の中に埋もれてしまいがちです。</span>',
       'whyNow.q1': '<span class="ln"><span class="ph">自分は今</span><span class="ph">何を感じているのか</span></span><span class="ln"><span class="ph">何を大切にしたいのか</span></span><span class="ln"><span class="ph">何に喜び、</span><span class="ph">何に迷い、</span><span class="ph">何を願っているのか</span></span>',
@@ -183,6 +185,8 @@
       'why.closing': '<span class="ln">Voice lets you capture how you feel, as naturally as talking to yourself.</span><span class="ln">When you listen back later, you can reconnect with feelings that words alone may not bring back.</span><span class="ln">That’s why Musuhi is built around <span class="why__accent">voice journaling</span>.</span>',
 
       'whyNow.title': 'What We Lose Sight of in a\u00a0Faster, More Convenient Life',
+      'whyNow.visualImg': 'assets/img/brand/why-now-polaroid-collage-en.webp',
+      'whyNow.visualAlt': 'Polaroid photos capturing everyday emotions and connections with the people who matter',
       'whyNow.g1': '<span class="ln">Life is becoming faster, more convenient, more comfortable, and increasingly digital.</span><span class="ln">We can stay connected to people at any time and preserve more information and moments than ever before.</span>',
       'whyNow.g2': 'At the same time, time to be with ourselves can easily get buried in the pace of everyday life.',
       'whyNow.q1': '<span class="ln">What am I feeling right now?</span><span class="ln">What truly matters to me?</span><span class="ln">What brings me joy, what am I unsure about, and what am I hoping for?</span>',
