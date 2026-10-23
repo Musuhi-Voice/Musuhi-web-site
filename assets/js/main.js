@@ -20,6 +20,7 @@
       'badges.appStoreHref': 'https://apps.apple.com/jp/app/musuhi/id6808240697',
       'badges.playImg': 'assets/img/badges/google-play-ja.png',
       'badges.playAlt': 'Google Playで手に入れよう',
+      'badges.playHref': 'https://play.google.com/store/apps/details?id=com.musuhivoice.app',
       'header.cta': 'App Store',
       'header.ctaHref': 'https://apps.apple.com/jp/app/musuhi/id6808240697',
 
@@ -176,6 +177,7 @@
       'badges.appStoreHref': 'https://apps.apple.com/us/app/musuhi/id6808240697',
       'badges.playImg': 'assets/img/badges/google-play-en.png',
       'badges.playAlt': 'Get it on Google Play',
+      'badges.playHref': 'https://play.google.com/store/apps/details?id=com.musuhivoice.app&hl=en_US',
       'header.cta': 'App Store',
       'header.ctaHref': 'https://apps.apple.com/us/app/musuhi/id6808240697',
 
