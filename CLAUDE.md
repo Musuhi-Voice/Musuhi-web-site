@@ -12,7 +12,7 @@ GitHub Pages で公開する静的サイトです。ビルド工程はありま�
 index.html          # ページ本体（1ページ構成）
 assets/css/style.css  # スタイル（デザイントークンは :root に集約）
 assets/js/main.js     # スクロール演出・水引コードの描画アニメーション
-assets/img/           # favicon.svg など
+assets/img/           # favicon.svg など（badges/ = App Store / Google Play 公式バッジ。改変禁止）
 .nojekyll             # Jekyll 処理を無効化（そのまま配信）
 .claude/skills/       # update-site / deploy Skill
 ```
