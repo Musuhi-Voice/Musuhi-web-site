@@ -15,6 +15,11 @@
       'header.nav.philosophy': 'Musuhiの考え',
       'header.nav.appExperience': 'アプリ体験',
       'header.nav.story': 'Musuhiの原点',
+      'badges.appStoreImg': 'assets/img/badges/app-store-ja.svg',
+      'badges.appStoreAlt': 'App Storeでダウンロード',
+      'badges.appStoreHref': 'https://apps.apple.com/jp/app/musuhi/id6808240697',
+      'badges.playImg': 'assets/img/badges/google-play-ja.png',
+      'badges.playAlt': 'Google Playで手に入れよう',
       'header.cta': 'App Store',
       'header.ctaHref': 'https://apps.apple.com/jp/app/musuhi/id6808240697',
 
@@ -142,8 +147,6 @@
       'ctaFinal.title': '今日、あなたの心が<br class="br-sp">動いた瞬間は？',
       'ctaFinal.list': '嬉しかったこと　感謝したこと　挑戦したこと　心が少し揺れたこと',
       'ctaFinal.lead': 'その瞬間を声と写真で残してみませんか<br>今日の気持ちをあなたの最初のMomentとして残せます',
-      'ctaFinal.button': 'App StoreでMusuhiをはじめる',
-      'ctaFinal.buttonHref': 'https://apps.apple.com/jp/app/musuhi/id6808240697',
       'ctaFinal.brandLine': '声からはじまる自分との対話　人とのつながり',
 
       'footer.privacy': 'プライバシーポリシー',
@@ -168,6 +171,11 @@
       'header.nav.philosophy': 'Our Philosophy',
       'header.nav.appExperience': 'Experience Musuhi',
       'header.nav.story': 'The Story Behind Musuhi',
+      'badges.appStoreImg': 'assets/img/badges/app-store-en.svg',
+      'badges.appStoreAlt': 'Download on the App Store',
+      'badges.appStoreHref': 'https://apps.apple.com/us/app/musuhi/id6808240697',
+      'badges.playImg': 'assets/img/badges/google-play-en.png',
+      'badges.playAlt': 'Get it on Google Play',
       'header.cta': 'App Store',
       'header.ctaHref': 'https://apps.apple.com/us/app/musuhi/id6808240697',
 
@@ -295,8 +303,6 @@
       'ctaFinal.title': 'What moved you today?',
       'ctaFinal.list': 'Something that made you happy　Something you’re grateful for　Something you tried　A moment that moved you',
       'ctaFinal.lead': 'Why not capture that moment in your voice and a photo?<br>Your first Moment can start with how you feel today.',
-      'ctaFinal.button': 'Download Musuhi on the App Store',
-      'ctaFinal.buttonHref': 'https://apps.apple.com/us/app/musuhi/id6808240697',
       'ctaFinal.brandLine': 'A conversation with yourself.<br>A connection with someone you care\u00a0about.<br>It all begins with your voice.',
 
       'footer.privacy': 'Privacy Policy',

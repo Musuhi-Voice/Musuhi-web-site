@@ -206,6 +206,9 @@ a { color: var(--ruri); }
 
 .site-header .btn--small { font-size: 15px; }
 
+.site-header__stores { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+.site-header__stores .btn--small { min-height: 44px; }
+
 /* 言語切替（JP｜EN）。ナビと同じ余白リズムに合わせつつ、CTAより一段控えめな重み */
 .lang-toggle {
   display: flex;
@@ -1008,7 +1011,33 @@ a { color: var(--ruri); }
   margin: 0 auto 44px;
 }
 
+/* 公式ストアバッジ: 比率・色は変更せず高さのみ指定。Google PlayのPNGは余白込みのため、可視部がApple SVGと揃う高さに換算 */
+.store-badges {
+  --badge-h: 48px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px 12px;
+}
+
+.hero__stores { margin-top: 28px; }
+
 .cta-final__action { margin-bottom: 56px; }
+
+.store-badge { display: inline-flex; line-height: 0; border-radius: 8px; }
+
+.store-badge img { display: block; width: auto; }
+
+.store-badge--apple img { height: var(--badge-h); }
+
+.store-badge--play img { height: calc(var(--badge-h) * 250 / 192); }
+
+html:lang(en) .store-badge--play img { height: calc(var(--badge-h) * 250 / 168); }
+
+@media (max-width: 480px) {
+  .store-badges { --badge-h: 44px; }
+}
 
 .cta-final__brand {
   display: flex;
@@ -1339,4 +1368,13 @@ a { color: var(--ruri); }
   .cta-final { padding: 80px 20px 90px; }
 
   .cta-final__list { line-height: 2.4; }
+}
+
+/* Header: 2ストア導線が狭幅で切れないよう、ワードマークを隠しボタンを詰める（アイコンは残す） */
+@media (max-width: 520px) {
+  .site-header__wordmark { display: none; }
+  .site-header__stores { gap: 6px; }
+  .site-header .site-header__stores .btn--small,
+  html[lang="en"] .site-header .site-header__stores .btn--small { font-size: 12px; padding: 8px 12px; }
+  .site-header__inner { gap: 8px; }
 }
